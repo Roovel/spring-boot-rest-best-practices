@@ -22,5 +22,4 @@ public class TestSpringBootRestBestPracticesApplication {
                 .with(TestSpringBootRestBestPracticesApplication.class)
                 .run(args);
     }
-
 }
