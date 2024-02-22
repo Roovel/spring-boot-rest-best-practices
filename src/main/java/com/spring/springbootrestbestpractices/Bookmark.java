@@ -1,5 +1,7 @@
 package com.spring.springbootrestbestpractices;
 
+import java.time.Instant;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,20 +24,28 @@ class Bookmark {
     private String url;
 
     @Column(name = "created_at", nullable = false, updatable = false)
-    private String createdAt;
+    private Instant createdAt;
 
     @Column(name = "updated_at", nullable = false)
-    private String updatedAt;
+    private Instant updatedAt;
 
     public Bookmark() {
     }
 
-    public Bookmark(Long id, String title, String url, String createdAt, String updatedAt) {
+    public Bookmark(Long id, String title, String url, Instant createdAt, Instant updatedAt) {
         this.id = id;
         this.title = title;
         this.url = url;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -54,19 +64,19 @@ class Bookmark {
         this.url = url;
     }
 
-    public String getCreatedAt() {
+    public Instant getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(Instant createdAt) {
         this.createdAt = createdAt;
     }
 
-    public String getUpdatedAt() {
+    public Instant getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(String updatedAt) {
+    public void setUpdatedAt(Instant updatedAt) {
         this.updatedAt = updatedAt;
     }
 }
