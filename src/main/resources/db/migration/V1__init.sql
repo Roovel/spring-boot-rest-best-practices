@@ -1,4 +1,4 @@
-create table bookmarks
+create table bookmark
 (
     id         bigserial primary key,
     title      varchar not null,
@@ -7,7 +7,7 @@ create table bookmarks
     updated_at timestamp
 );
 
-INSERT INTO bookmarks(title, url, created_at) VALUES
+INSERT INTO bookmark(title, url, created_at) VALUES
                                                   ('How (not) to ask for Technical Help?','https://sivalabs.in/how-to-not-to-ask-for-technical-help', CURRENT_TIMESTAMP),
                                                   ('Announcing My SpringBoot Tips Video Series on YouTube','https://sivalabs.in/announcing-my-springboot-tips-video-series', CURRENT_TIMESTAMP),
                                                   ('Kubernetes - Exposing Services to outside of Cluster using Ingress','https://sivalabs.in/kubernetes-ingress', CURRENT_TIMESTAMP),
